@@ -11,3 +11,4 @@ Observation: This is a side project specifically built for me to train my Rust s
 * Build the second API GET /commands/{id}. Do nothing yet.
 * Specifiy the contract for the APIs by versioning an openapi file.
 * Add toml configuration file and implement first logic in POST /commands.
+* Define unit test strategy and cover current code.
