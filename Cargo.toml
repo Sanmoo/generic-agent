@@ -13,6 +13,6 @@ toml = "0.7.3"
 tokio = { version = "1", features = ["full"] }
 r2d2 = "0.8"
 r2d2_sqlite = "0.20" # 0.21.0 blocked on sqlx sqlite update
-rusqlite = { version = "0.27", features = ["chrono", "time"] }
+rusqlite = "0.27"
 chrono = "0.4.24"
 async-trait = "0.1"

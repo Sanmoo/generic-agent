@@ -6,6 +6,5 @@ Observation: This is a side project specifically built for me to train my Rust s
 
 # TODO
 
-* In GET /commands/{id} show the datetimes with time information.
 * Define unit test strategy and cover current code.
 * Add proper logging.
