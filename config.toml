@@ -1,0 +1,2 @@
+[processes]
+bin_path = "/bin/sleep"
