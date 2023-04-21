@@ -19,7 +19,7 @@ pub fn setup_task_manager(mut rx: Receiver<ProcessInBackgroundCommand>, bin_path
             let pool = db.clone();
             let conn = pool.get().unwrap();
             conn.execute(
-                "update commands set finished_at = date('now'), status = ?, stdout = ?, stderr = ? where id = ?",
+                "update commands set finished_at = datetime('now'), status = ?, stdout = ?, stderr = ? where id = ?",
                 [
                     output.status.code().unwrap().to_string(),
                     String::from_utf8(output.stdout).unwrap(),

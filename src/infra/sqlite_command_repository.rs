@@ -1,6 +1,6 @@
 use crate::core::ports::{command_repository::CommandRepository, command::Command};
 
-use super::db::Pool;
+use super::{db::Pool};
 
 pub struct SqliteCommandRepository {
     pub pool: Pool
@@ -16,7 +16,7 @@ impl CommandRepository for SqliteCommandRepository {
         let conn = pool.get().map_err(|e| e.to_string())?;
 
         conn.execute(
-            "INSERT INTO commands(created_at, started_at, command) VALUES (date('now'), date('now'), ?)",
+            "INSERT INTO commands(created_at, started_at, command) VALUES (datetime('now'), datetime('now'), ?)",
             [command]
         ).map_err(|e|e.to_string())?;
 
